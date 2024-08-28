@@ -1,0 +1,185 @@
+<!-- FOR ISSUE #41 How to add F4 paper size? -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>F4</title>
+
+    <!-- Normalize or reset CSS with your favorite library -->
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"-->
+
+    <!-- Load paper.css for happy printing -->
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.4.1/paper.css" -->
+    <style>
+        @page {
+            margin: 0
+        }
+
+        body {
+            margin: 0
+        }
+
+        .sheet {
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+            box-sizing: border-box;
+            page-break-after: always
+        }
+
+        body.A3 .sheet {
+            width: 297mm;
+            height: 419mm
+        }
+
+        body.A3.landscape .sheet {
+            width: 420mm;
+            height: 296mm
+        }
+
+        body.A4 .sheet {
+            width: 210mm;
+            height: 296mm
+        }
+
+        body.A4.landscape .sheet {
+            width: 297mm;
+            height: 209mm
+        }
+
+        body.A5 .sheet {
+            width: 148mm;
+            height: 209mm
+        }
+
+        body.A5.landscape .sheet {
+            width: 210mm;
+            height: 147mm
+        }
+
+        body.F4 .sheet {
+            width: 210mm;
+            height: 329mm
+        }
+
+        body.F4.landscape .sheet {
+            width: 330mm;
+            height: 209mm
+        }
+
+        body.letter .sheet {
+            width: 216mm;
+            height: 279mm
+        }
+
+        body.letter.landscape .sheet {
+            width: 280mm;
+            height: 215mm
+        }
+
+        body.legal .sheet {
+            width: 216mm;
+            height: 356mm
+        }
+
+        body.legal.landscape .sheet {
+            width: 357mm;
+            height: 215mm
+        }
+
+        .sheet.padding-0mm {
+            padding: 0mm
+        }
+
+        .sheet.padding-5mm {
+            padding: 5mm
+        }
+
+        .sheet.padding-10mm {
+            padding: 10mm
+        }
+
+        .sheet.padding-15mm {
+            padding: 15mm
+        }
+
+        .sheet.padding-20mm {
+            padding: 20mm
+        }
+
+        .sheet.padding-25mm {
+            padding: 25mm
+        }
+
+        @media screen {
+            body {
+                background: #e0e0e0
+            }
+
+            .sheet {
+                background: white;
+                box-shadow: 0 .5mm 2mm rgba(0, 0, 0, .3);
+                margin: 5mm auto
+            }
+        }
+
+        @media print {
+            body.A3.landscape {
+                width: 420mm
+            }
+
+            body.A3,
+            body.A4.landscape {
+                width: 297mm
+            }
+
+            body.A4,
+            body.A5.landscape {
+                width: 210mm
+            }
+
+            body.A5 {
+                width: 148mm
+            }
+
+            body.letter,
+            body.legal {
+                width: 216mm
+            }
+
+            body.letter.landscape {
+                width: 280mm
+            }
+
+            body.legal.landscape {
+                width: 357mm
+            }
+        }
+    </style>
+    <!-- Set page size here: A5, A4 or A3 -->
+    <!-- Set also "landscape" if you need -->
+    <style>
+        @page {
+            size: F4
+        }
+    </style>
+</head>
+
+<!-- Set "A5", "A4" or "A3" for class name -->
+<!-- Set also "landscape" if you need -->
+
+<body class="F4">
+
+    <!-- Each sheet element should have the class "sheet" -->
+    <!-- "padding-**mm" is optional: you can set 10, 15, 20 or 25 -->
+    <section class="sheet padding-5mm">
+
+        <!-- Write HTML just like a web page -->
+        <article>FOR ISSUE #41 How to add F4 paper size? <br> is an F4 document.</article>
+
+    </section>
+
+</body>
+
+</html>
